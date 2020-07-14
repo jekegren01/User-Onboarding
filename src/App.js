@@ -5,9 +5,8 @@ import Form from './Form'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+        <h1>Sign Up Form</h1>
         <Form />
-      </header>
     </div>
   );
 }

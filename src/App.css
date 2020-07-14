@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+
+label {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin: 10px 0;
+font-size: 1.4rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin: 5px 0 0;
+  display: block;
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 0.3s;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  background-color: white;
+}
+
+select {
+  height: 40px;
+  width: 325px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #1ee7e2;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1ee7e2;
+}
+
+input:placeholder {
+  color: #a8b2b2;
+}
