@@ -101,7 +101,7 @@ button {
 }
 
 .users {
-  padding-left: 200px;
+  padding-left: 10vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
