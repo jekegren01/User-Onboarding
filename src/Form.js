@@ -15,7 +15,6 @@ const [formState, setFormState] = useState(defautlState);
 const [errors, setErrors] = useState({...defautlState, terms: ''});
 const [buttonDisabled, setButtonDisabled] = useState(true);
 const [users, setUsers] = useState([]);
-const [usersEmail, setUsersEmail] = useState([]);
 
 let formSchema = yup.object().shape({
     name: yup.string().required("Please provide name."),
