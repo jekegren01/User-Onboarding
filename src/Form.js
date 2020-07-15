@@ -15,6 +15,7 @@ const [formState, setFormState] = useState(defautlState);
 const [errors, setErrors] = useState({...defautlState, terms: ''});
 const [buttonDisabled, setButtonDisabled] = useState(true);
 const [users, setUsers] = useState([]);
+const [usersEmail, setUsersEmail] = useState([]);
 
 let formSchema = yup.object().shape({
     name: yup.string().required("Please provide name."),
@@ -40,7 +41,7 @@ const formSubmit = event => {
     axios
         .post("https://reqres.in/api/users", formState)
         .then((res) => {console.log('Successful post', res) 
-            setUsers([...users, res.data.name])})
+            setUsers([...users, res.data])})
         .catch(err => console.log('Error in post:', err));
 };
 
@@ -108,11 +109,18 @@ const inputChange = event => {
             </form>
             <div className='users'>
                 <h2>Users</h2>
+                <div className='user'>
                 {users.map((user, i) => (
-                    <div className='user'>
-                        {user}
+                    <div className='userList'>
+                        <div className='sub'>
+                        {user.name}
+                        </div>
+                        <div className='sub'>
+                        {user.email}
+                        </div>
                     </div>
                 ))}
+                </div>
             </div>
 
         </div>

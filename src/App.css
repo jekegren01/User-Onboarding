@@ -113,3 +113,12 @@ button {
   display: flex;
   flex-direction: column;
 }
+
+.userList {
+  display: flex;
+  padding: 10px 0px;
+}
+
+.sub {
+  padding: 0px 50px;
+}
