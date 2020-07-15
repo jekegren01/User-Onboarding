@@ -106,10 +106,10 @@ const inputChange = event => {
                 </label>
                 <button disabled={buttonDisabled}>Submit</button>
             </form>
-            <div>
+            <div className='users'>
                 <h2>Users</h2>
                 {users.map((user, i) => (
-                    <div>
+                    <div className='user'>
                         {user}
                     </div>
                 ))}

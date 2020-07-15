@@ -99,3 +99,17 @@ input:placeholder {
 button {
   width: 20%;
 }
+
+.users {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.user {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
