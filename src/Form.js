@@ -14,6 +14,7 @@ const defautlState = {
 const [formState, setFormState] = useState(defautlState);
 const [errors, setErrors] = useState({...defautlState, terms: ''});
 const [buttonDisabled, setButtonDisabled] = useState(true);
+const [users, setUsers] = useState([]);
 
 let formSchema = yup.object().shape({
     name: yup.string().required("Please provide name."),
@@ -38,7 +39,8 @@ const formSubmit = event => {
     console.log('form submitted');
     axios
         .post("https://reqres.in/api/users", formState)
-        .then(() => console.log('Successful post'))
+        .then((res) => {console.log('Successful post', res) 
+            setUsers([...users, res.data.name])})
         .catch(err => console.log('Error in post:', err));
 };
 
@@ -83,7 +85,7 @@ const inputChange = event => {
                     errors={errors}
                 />
                 <Input
-                    type="text"
+                    type="email"
                     name="email"
                     onChange={inputChange}
                     value={formState.email}
@@ -91,7 +93,7 @@ const inputChange = event => {
                     errors={errors}
                 />
                 <Input
-                    type="text"
+                    type="password"
                     name="password"
                     onChange={inputChange}
                     value={formState.password}
@@ -104,6 +106,15 @@ const inputChange = event => {
                 </label>
                 <button disabled={buttonDisabled}>Submit</button>
             </form>
+            <div>
+                <h2>Users</h2>
+                {users.map((user, i) => (
+                    <div>
+                        {user}
+                    </div>
+                ))}
+            </div>
+
         </div>
     );
 };
