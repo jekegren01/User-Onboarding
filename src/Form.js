@@ -104,7 +104,7 @@ const inputChange = event => {
                     <input name="terms" type="checkbox" onChange={inputChange} />
                         Terms & Conditions
                 </label>
-                <button disabled={buttonDisabled}>Submit</button>
+                <button id="submitButton" disabled={buttonDisabled}>Submit</button>
             </form>
             <div className='users'>
                 <h2>Users</h2>
