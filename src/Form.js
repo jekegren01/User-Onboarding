@@ -110,7 +110,7 @@ const inputChange = event => {
                 <h2>Users</h2>
                 <div className='user'>
                 {users.map((user, i) => (
-                    <div key={i} className='userList'>
+                    <div key={i} id="list" className='userList'>
                         <div className='sub'>
                         {user.name}
                         </div>

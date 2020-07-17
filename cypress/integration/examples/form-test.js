@@ -22,6 +22,12 @@ describe('form test', () => {
 
         cy.get('button#submitButton')
         .should('not.be.disabled')
+        .click()
+
+        cy.wait(2000)
+        cy.get('div#list > div')
+        .should('have.text', 'Jacob Ekegren' + email)
+
 
 
     })
